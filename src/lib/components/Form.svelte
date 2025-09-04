@@ -27,25 +27,40 @@
 	<!-- Grid -->
 	<div class="grid-cols- grid gap-4">
 		<!-- 1 -->
-		<div class={`${cardClasses}`}>
+		<form class={`${cardClasses}`}>
 			<header>
 				<h3 class="h3 text-[#621132]">FORMA OFICIAL 100</h3>
-				<p class="text-[#621132] opacity-60">Ingresa los campos solicitados.</p>
+				<h4 class="h6 text-[#621132] opacity-60">DATOS INFORMATIVOS</h4>
 			</header>
 
 			<article class="grid grid-cols-1 gap-5">
 				<label class="label">
-					<span class="label-text text-[#621132]">Email</span>
-					<input type="email" class="input" placeholder="me@example.com" />
+					<span class="label-text text-[#621132]"
+						>220608 - INSTITUCIÓN FINANCIERA EN LA QUE SE RETORNA LA INVERSIÓN</span
+					>
+					<!-- Institución Financiera -->
+					<select class="select text-[#121132]">
+						<option value="1">Institución Financiera 1</option>
+						<option value="2">Institución Financiera 2</option>
+						<option value="3">Institución Financiera 3</option>
+						<option value="4">Institución Financiera 4</option>
+						<option value="5">Institución Financiera 5</option>
+					</select>
 				</label>
 
 				<label class="label">
-					<span class="label-text text-[#621132]">Password</span>
-					<input type="password" class="input" placeholder="me@example.com" />
+					<span class="label-text text-[#621132]"
+						>220609 - NÚMERO DE CUENTA DE INVERSIÓN O DE CONTRATO</span
+					>
+					<input
+						type="text"
+						class="input text-[#021132]"
+						placeholder="ejemplo: 111100001111000011"
+					/>
 				</label>
 				<hr class="hr" />
 			</article>
 			<button class="btn w-full preset-filled-primary-500 text-white">Enviar</button>
-		</div>
+		</form>
 	</div>
 </div>
