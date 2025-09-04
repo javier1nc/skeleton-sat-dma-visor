@@ -144,8 +144,8 @@
 					</div>
 
 					<small class="text-sm text-gray-500"
-						>MONTO DE LA ACTUALIZACIÓN CAUSADA A LA FECHA DE RETORNO QUE NO PAGARÁ POR HACER USO DEL
-						BENEFICIO</small
+						>Monto de la actualización causada a la fecha de retorno que no pagará por hacer uso del
+						beneficio</small
 					>
 				</label>
 
