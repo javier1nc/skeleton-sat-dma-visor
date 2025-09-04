@@ -5,7 +5,7 @@
 	const appPath = PUBLIC_APP_PATH;
 
 	// Classes
-	const cardClasses = 'card preset-outlined-surface-200-800 bg-white   p-5 space-y-5';
+	const cardClasses = 'card preset-outlined-surface-200-800 bg-white p-5 space-y-5';
 
 	// Seed Data
 	const teamData = [
@@ -34,8 +34,8 @@
 			</header>
 
 			<article class="grid grid-cols-1 gap-5">
-				<label class="label">
-					<span class="label-text text-[#621132]"
+				<label class="block">
+					<span class="block font-semibold text-[#621132]"
 						>220608 - INSTITUCIÓN FINANCIERA EN LA QUE SE RETORNA LA INVERSIÓN</span
 					>
 					<!-- Institución Financiera -->
@@ -48,15 +48,22 @@
 					</select>
 				</label>
 
-				<label class="label">
-					<span class="label-text text-[#621132]"
+				<label class="block">
+					<span class="block font-semibold text-[#621132]"
 						>220609 - NÚMERO DE CUENTA DE INVERSIÓN O DE CONTRATO</span
 					>
+
 					<input
 						type="text"
-						class="input text-[#021132]"
+						maxlength="14"
+						pattern="[a-zA-Z0-9]+"
+						class="input p-1 text-black"
 						placeholder="ejemplo: 111100001111000011"
 					/>
+					<small class="text-sm text-gray-500"
+						>Se deberá anotar el número de cuenta de inversión o de contrato de la institución
+						financiera donde se retorna la inversión</small
+					>
 				</label>
 				<hr class="hr" />
 			</article>
