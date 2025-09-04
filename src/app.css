@@ -8,3 +8,25 @@
 
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+/* Register a Custom Themes */
+/* Make sure to resolve the relative path. */
+/* Note the .css extension is optional. */
+@import '../sat.css';
+
+@import '@fontsource/noto-sans';
+
+[data-theme='sat'] {
+	--heading-font-family: 'Noto Sans', sans-serif;
+	--base-font-family: 'Noto Sans', sans-serif;
+	--anchor-font-family: 'inherit';
+}
+
+html,
+body {
+	@apply h-full;
+}
+
+body {
+	@apply bg-white;
+}
