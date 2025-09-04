@@ -5,7 +5,7 @@
 	const appPath = PUBLIC_APP_PATH;
 
 	// Classes
-	const cardClasses = 'card preset-outlined-surface-200-800 bg-red-100   p-5 space-y-5';
+	const cardClasses = 'card preset-outlined-surface-200-800 bg-white   p-5 space-y-5';
 
 	// Seed Data
 	const teamData = [
@@ -35,12 +35,12 @@
 
 			<article class="grid grid-cols-1 gap-5">
 				<label class="label">
-					<span class="label-text">Email</span>
+					<span class="label-text text-[#621132]">Email</span>
 					<input type="email" class="input" placeholder="me@example.com" />
 				</label>
 
 				<label class="label">
-					<span class="label-text">Password</span>
+					<span class="label-text text-[#621132]">Password</span>
 					<input type="password" class="input" placeholder="me@example.com" />
 				</label>
 				<hr class="hr" />
