@@ -77,48 +77,14 @@
 		class="mx-auto flex h-16 max-w-screen items-center justify-between bg-[#621132] px-4 py-3 sm:px-6 lg:px-8"
 	>
 		<!-- Title -->
-		<p class="text-white">VISOR DE...</p>
-
-		<!-- Mobile menu button -->
-		<button
-			class="inline-flex items-center justify-center p-2 text-gray-700 sm:hidden"
-			on:click={() => (menuOpen = !menuOpen)}
-			aria-label="Toggle menu"
-		>
-			<svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-				<path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					d={menuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
-				/>
-			</svg>
-		</button>
+		<p class="text-white">
+			DECLARACIÓN DEL ISR POR INGRESOS DE INVERSIONES EN EL EXTRANJERO RETORNADAS AL PAÍS FORMA
+			OFICIAL 100
+		</p>
 
 		<!-- Desktop Nav -->
 		<nav class="hidden space-x-6 sm:flex">
-			<a
-				href={basepath}
-				class="text-sm font-semibold text-white hover:text-[#821132]"
-				aria-current={$page.url.pathname === basepath ? 'page' : undefined}
-			>
-				Inicio
-			</a>
-			<a
-				href={`${basepath}${apppath}`}
-				class="text-sm font-semibold text-white hover:text-[#821132]"
-				aria-current={$page.url.pathname.startsWith(`${basepath}${apppath}`) ? 'page' : undefined}
-			>
-				{appname}
-			</a>
-
-			<!--<a
-				href={`${basepath}/admin`}
-				class="text-sm font-semibold text-gray-700 hover:text-[#621132]"
-				aria-current={$page.url.pathname.startsWith(`${basepath}/admin`) ? 'page' : undefined}
-			>
-				Admin
-			</a>
-			-->
+			<p class="text-sm font-semibold text-white hover:text-[#821132]">Inicio</p>
 		</nav>
 	</div>
 </header>
