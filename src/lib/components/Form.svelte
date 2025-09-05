@@ -335,7 +335,7 @@
 						min="0"
 						max="12"
 						class="input p-1 text-black"
-						placeholder="ejemplo: _"
+						placeholder="ejemplo: 111100001111000011"
 						required
 					/>
 					<small class="text-sm text-gray-500"
@@ -355,7 +355,7 @@
 						min="0"
 						max="12"
 						class="input p-1 text-black"
-						placeholder="ejemplo: 220618"
+						placeholder="ejemplo: 111100001111000011"
 					/>
 					<small class="text-sm text-gray-500"
 						>Se deberá anotar el monto de los ingresos derivados de las inversiones mantenidas en el
@@ -378,14 +378,52 @@
 						on:focus={handleFocusC8}
 					/>
 					<small class="text-sm text-gray-500"
-						>Se deberá anotar el monto de los ingresos derivados de las inversiones mantenidas en el
-						extranjero</small
+						>Monto de la actualización del impuesto causado a la fecha de retorno, y en su caso, la
+						que se cause si el impuesto no se paga dentro de los 15 días siguientes a la fecha de
+						retorno</small
 					>
 				</label>
 
 				<!-- C9 - RECARGOS  -->
 				<label class="block">
-					<span class="block font-semibold text-[#621132]">C8 - PARTE ACTUALIZADA</span>
+					<span class="block font-semibold text-[#621132]">C9 - RECARGOS</span>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500"
+						>Monto de los recargos causados a la fecha de retorno y en su caso, los que se causen si
+						el impuesto no se paga dentro de los 15 días siguientes a la fecha de retorno</small
+					>
+				</label>
+
+				<!-- C10 - MULTA POR CORRECCIÓN  -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]">C10 - MULTA POR CORRECCIÓN</span>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500">_</small>
+				</label>
+
+				<!-- C11 - MULTA POR CORRECCIÓN  -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]">C11 - TOTAL DE CONTRIBUCIONES</span>
 
 					<input
 						type="text"
@@ -397,13 +435,369 @@
 						placeholder="ejemplo: _"
 						required
 					/>
-					<small class="text-sm text-gray-500"
-						>Se deberá anotar el monto de los ingresos derivados de las inversiones mantenidas en el
-						extranjero</small
-					>
+					<small class="text-sm text-gray-500">_</small>
 				</label>
 
-				<hr class="hr" />
+				<!-- C12 - CRÉDITO AL SALARIO  -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]">C12 - CRÉDITO AL SALARIO</span>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500"
+						>EL MONTO DEL SALDO PENDIENTE DE ACREDITAR AL 31 DE DICIEMBRE DEL 2007 SE PODRÁ APLICAR
+						HASTA AGOTARLO
+					</small>
+				</label>
+
+				<!-- C12A - SUBSIDIO PARA EL EMPLEO  -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]">C12A - SUBSIDIO PARA EL EMPLEO</span>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500">_ </small>
+				</label>
+
+				<!-- C13 - COMPENSACIONES  -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]">C13 - COMPENSACIONES</span>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500">_ </small>
+				</label>
+
+				<!-- C14 - CRÉDITO IEPS DIESEL SECTOR PRIMARIO Y MINERO  -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]"
+						>C14 - CRÉDITO IEPS DIESEL SECTOR PRIMARIO Y MINERO</span
+					>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500">_ </small>
+				</label>
+
+				<!-- C15 - DIESEL AUTOMOTRIZ PARA TRANSPORTE   -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]"
+						>C15 - DIESEL AUTOMOTRIZ PARA TRANSPORTE
+					</span>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500">_ </small>
+				</label>
+
+				<!-- C16 - USO DE INFRAESTRUCTURA CARRETERA DE CUOTA -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]"
+						>C16 - USO DE INFRAESTRUCTURA CARRETERA DE CUOTA
+					</span>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500">_ </small>
+				</label>
+
+				<!-- C18 - OTROS ESTÍMULOS  -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]">C18 - OTROS ESTÍMULOS </span>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500">_ </small>
+				</label>
+
+				<!-- C19- CERTIFICADOS TESOFE  -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]">C19 - CERTIFICADOS TESOFE</span>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500">_ </small>
+				</label>
+
+				<!-- C34- DIESEL MARINO -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]">C34 - DIESEL MARINO</span>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500">_ </small>
+				</label>
+
+				<!-- C21 - TOTAL DE APLICACIONES -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]">C21 - TOTAL DE APLICACIONES</span>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500">_ </small>
+				</label>
+
+				<!-- C21 - TOTAL DE APLICACIONES -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]">C21 - TOTAL DE APLICACIONES</span>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500">_ </small>
+				</label>
+
+				<!-- C5 - FECHA DEL PAGO REALIZADO CON ANTERIORIDAD -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]"
+						>C5 - FECHA DEL PAGO REALIZADO CON ANTERIORIDAD</span
+					>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500">_ </small>
+				</label>
+
+				<!-- C20 - MONTO PAGADO CON ANTERIORIDAD -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]">C20 - MONTO PAGADO CON ANTERIORIDAD</span
+					>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500">_ </small>
+				</label>
+
+				<!-- C20B - ¿USTED REALIZÓ EN LAS ÚLTIMAS 48 HORAS UN PAGO PARA ESTE CONCEPTO? -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]"
+						>C20B - ¿USTED REALIZÓ EN LAS ÚLTIMAS 48 HORAS UN PAGO PARA ESTE CONCEPTO?</span
+					>
+
+					<div class="space-y-2">
+						<label class="flex items-center space-x-2">
+							<input class="radio" type="radio" checked name="radio-direct" value="1" />
+							<p class="text-[#121132]">Si</p>
+						</label>
+						<label class="flex items-center space-x-2">
+							<input class="radio" type="radio" name="radio-direct" value="2" />
+							<p class="text-[#121132]">No</p>
+						</label>
+					</div>
+
+					<small class="text-sm text-gray-500">_ </small>
+				</label>
+
+				<!-- C20A - IMPORTE PAGADO EN LAS ÚLTIMAS 48 HORAS-->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]"
+						>C20A - IMPORTE PAGADO EN LAS ÚLTIMAS 48 HORAS</span
+					>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+
+					<small class="text-sm text-gray-500">_ </small>
+				</label>
+
+				<!-- C22 - CANTIDAD A CARGO -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]">C22 - CANTIDAD A CARGO</span>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+
+					<small class="text-sm text-gray-500">_ </small>
+				</label>
+
+				<!-- C23A - ¿APLICA PRIMERA PARCIALIDAD? -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]">C23A - ¿APLICA PRIMERA PARCIALIDAD?</span
+					>
+
+					<div class="space-y-2">
+						<label class="flex items-center space-x-2">
+							<input class="radio" type="radio" checked name="radio-direct2" value="1" />
+							<p class="text-[#121132]">Si</p>
+						</label>
+						<label class="flex items-center space-x-2">
+							<input class="radio" type="radio" name="radio-direct2" value="2" />
+							<p class="text-[#121132]">No</p>
+						</label>
+					</div>
+
+					<!-- C23 - IMPORTE DE LA 1RA. PARCIALIDAD -->
+					<label class="block">
+						<span class="block font-semibold text-[#621132]"
+							>C23 - IMPORTE DE LA 1RA. PARCIALIDAD</span
+						>
+
+						<input
+							type="text"
+							maxlength="12"
+							pattern="[0-9]+"
+							min="0"
+							max="12"
+							class="input p-1 text-black"
+							placeholder="ejemplo: 111100001111000011"
+							required
+						/>
+
+						<small class="text-sm text-gray-500"
+							>Monto del primer pago cuando se haya solicitado el pago a plazos, ya sea en
+							parcialidades o diferido. Para las solicitudes del pago en parcialidades o diferido de
+							las contribuciones retenidas, trasladadas o recaudadas procederán siempre que exista
+							un decreto publicado en el Diario Oficial de la Federación en el cuál se otorgue este
+							beneficio</small
+						>
+					</label>
+
+					<!-- C24 - IMPORTE SIN LA 1RA. PARCIALIDAD -->
+					<label class="block">
+						<span class="block font-semibold text-[#621132]"
+							>C24 - IMPORTE SIN LA 1RA. PARCIALIDAD</span
+						>
+
+						<input
+							type="text"
+							maxlength="12"
+							pattern="[0-9]+"
+							min="0"
+							max="12"
+							class="input p-1 text-black"
+							placeholder="ejemplo: 111100001111000011"
+							required
+						/>
+
+						<small class="text-sm text-gray-500"
+							>Cantidad pendiente de pago, una vez disminuida la primera parcialidad. Para las
+							solicitudes del pago en parcialidades o diferido de las contribuciones retenidas,
+							trasladadas o recaudadas procederán siempre que exista un decreto publicado en el
+							Diario Oficial de la Federación en el cuál se otorgue este beneficio</small
+						>
+					</label>
+
+					<hr class="hr" />
+				</label>
 			</article>
 			<button class="btn w-full preset-filled-primary-500 text-white">Enviar</button>
 		</form>
