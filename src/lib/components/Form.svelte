@@ -12,6 +12,9 @@
 	let showAlert220619 = false;
 	let Alert220619Answered = false;
 
+	let showAlertC8 = false;
+	let AlertC8Answered = false;
+
 	const basePath = PUBLIC_BASE_PATH;
 	const appPath = PUBLIC_APP_PATH;
 
@@ -54,6 +57,18 @@
 		} else {
 			showAlert220619 = false;
 			Alert220619Answered = false;
+		}
+	}
+
+	function handleFocusC8() {
+		console.log('handleFocusC8');
+
+		if (!AlertC8Answered) {
+			showAlertC8 = true;
+			AlertC8Answered = true;
+		} else {
+			showAlertC8 = false;
+			AlertC8Answered = false;
 		}
 	}
 </script>
@@ -248,11 +263,138 @@
 
 					<input
 						type="text"
-						maxlength="14"
+						maxlength="12"
 						pattern="[0-9]+"
 						min="0"
 						class="input p-1 text-black"
 						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500"
+						>Se deberá anotar el monto de los ingresos derivados de las inversiones mantenidas en el
+						extranjero</small
+					>
+				</label>
+
+				<!-- 220617 - IMPUESTO ACREDITABLE PAGADO EN EL EXTRANJERO -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]"
+						>220617 - IMPUESTO ACREDITABLE PAGADO EN EL EXTRANJERO
+					</span>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500"
+						>Se deberá anotar el monto de los ingresos derivados de las inversiones mantenidas en el
+						extranjero</small
+					>
+				</label>
+
+				<!-- 220618 - IMPUESTO A CARGO -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]">220618 - IMPUESTO A CARGO </span>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500"
+						>Se deberá anotar el monto de los ingresos derivados de las inversiones mantenidas en el
+						extranjero</small
+					>
+				</label>
+
+				<header>
+					<h6 class="h6 text-[#621132] opacity-60">DATOS DEL PAGO</h6>
+					<p class="text-[#621132]">IMPUESTO SOBRE LA RENTA</p>
+				</header>
+
+				<!-- R100 - ISR POR INGRESOS DE INVERSIONES EN EL EXTRANJERO RETORNADAS AL PAÍS -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]"
+						>R100 - ISR POR INGRESOS DE INVERSIONES EN EL EXTRANJERO RETORNADAS AL PAÍS
+					</span>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: _"
+						required
+					/>
+					<small class="text-sm text-gray-500"
+						>Se deberá anotar el monto de los ingresos derivados de las inversiones mantenidas en el
+						extranjero</small
+					>
+				</label>
+
+				<!-- C7 - A CARGO  -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]">C7 - A CARGO </span>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 220618"
+					/>
+					<small class="text-sm text-gray-500"
+						>Se deberá anotar el monto de los ingresos derivados de las inversiones mantenidas en el
+						extranjero</small
+					>
+				</label>
+
+				<!-- C8 - PARTE ACTUALIZADA  -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]">C8 - PARTE ACTUALIZADA</span>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: _"
+						on:focus={handleFocusC8}
+					/>
+					<small class="text-sm text-gray-500"
+						>Se deberá anotar el monto de los ingresos derivados de las inversiones mantenidas en el
+						extranjero</small
+					>
+				</label>
+
+				<!-- C9 - RECARGOS  -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]">C8 - PARTE ACTUALIZADA</span>
+
+					<input
+						type="text"
+						maxlength="12"
+						pattern="[0-9]+"
+						min="0"
+						max="12"
+						class="input p-1 text-black"
+						placeholder="ejemplo: _"
 						required
 					/>
 					<small class="text-sm text-gray-500"
@@ -301,5 +443,24 @@ Si no desea ser publicado, puede optar por hacer el pago.
 	on:cancel={() => {
 		// logic here
 		showAlert220619 = false;
+	}}
+/>
+
+<AlertDialog
+	bind:open={showAlertC8}
+	title="C8 - PARTE ACTUALIZADA"
+	description="Hacer uso de este beneficio implica que sus datos (nombre, denominación o razón social, clave del RFC y el monto de la actualización causada que no pagará) sean publicados en el Portal del SAT.
+
+Si no desea ser publicado, puede optar por hacer el pago.
+
+¿Desea pagar la actualización?   SI   NO"
+	on:action={() => {
+		// logic here
+		console.log('action');
+		showAlertC8 = false;
+	}}
+	on:cancel={() => {
+		// logic here
+		showAlertC8 = false;
 	}}
 />
