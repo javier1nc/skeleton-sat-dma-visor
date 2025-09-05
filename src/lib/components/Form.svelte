@@ -65,10 +65,12 @@
 		<form class={`${cardClasses}`}>
 			<header>
 				<h3 class="h3 text-[#621132]">FORMA OFICIAL 100</h3>
-				<h4 class="h6 text-[#621132] opacity-60">DATOS INFORMATIVOS</h4>
 			</header>
 
 			<article class="grid grid-cols-1 gap-5">
+				<header>
+					<h4 class="h6 text-[#621132] opacity-60">DATOS INFORMATIVOS</h4>
+				</header>
 				<label class="block">
 					<span class="block font-semibold text-[#621132]"
 						>220608 - INSTITUCIÓN FINANCIERA EN LA QUE SE RETORNA LA INVERSIÓN</span
@@ -95,6 +97,7 @@
 						pattern="[a-zA-Z0-9]+"
 						class="input p-1 text-black"
 						placeholder="ejemplo: A1110000111100001Z"
+						required
 					/>
 					<small class="text-sm text-gray-500"
 						>Se deberá anotar el número de cuenta de inversión o de contrato de la institución
@@ -113,9 +116,11 @@
 							type="text"
 							maxlength="14"
 							pattern="[0-9]+"
+							min="0"
 							class="input p-1 text-black"
 							placeholder="ejemplo: 111100001111000011"
 							on:focus={handleFocus220610}
+							required
 						/>
 					</div>
 
@@ -137,15 +142,122 @@
 							type="text"
 							maxlength="14"
 							pattern="[0-9]+"
+							min="0"
 							class="input p-1 text-black"
 							placeholder="ejemplo: 111100001111000011"
 							on:focus={handleFocus220619}
+							required
 						/>
 					</div>
 
 					<small class="text-sm text-gray-500"
 						>Monto de la actualización causada a la fecha de retorno que no pagará por hacer uso del
 						beneficio</small
+					>
+				</label>
+
+				<header>
+					<h4 class="h6 text-[#621132] opacity-60">DETERMINACIÓN DEL IMPUESTO SOBRE LA RENTA</h4>
+				</header>
+
+				<!-- 220612 - MONTO TOTAL DE LA INVERSIÓN QUE RETORNA -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]"
+						>220612 - MONTO TOTAL DE LA INVERSIÓN QUE RETORNA</span
+					>
+
+					<input
+						type="text"
+						maxlength="14"
+						pattern="[0-9]+"
+						min="0"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500"
+						>Se deberá anotar el monto de la inversión en el extranjero más los ingresos que ésta
+						haya generado al 31 de diciembre 2014</small
+					>
+				</label>
+
+				<!-- 220613 - MONTO TOTAL DE LA INVERSIÓN QUE RETORNA -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]"
+						>220613 - MONTO DE LA INVERSIÓN ORIGINAL QUE SE RETORNA
+					</span>
+
+					<input
+						type="text"
+						maxlength="14"
+						pattern="[0-9]+"
+						min="0"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500"
+						>Se deberá anotar el monto de la inversión original mantenida en el extranjero que
+						retorna al país</small
+					>
+				</label>
+
+				<!-- 220614 - MONTO DE LOS INGRESOS DERIVADOS DE INVERSIONES MANTENIDAS EN EL EXTRANJERO -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]"
+						>220614 - MONTO DE LOS INGRESOS DERIVADOS DE INVERSIONES MANTENIDAS EN EL EXTRANJERO
+					</span>
+
+					<input
+						type="text"
+						maxlength="14"
+						pattern="[0-9]+"
+						min="0"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500"
+						>Se deberá anotar el monto de los ingresos derivados de las inversiones mantenidas en el
+						extranjero</small
+					>
+				</label>
+
+				<!-- 220615 - BASE GRAVABLE -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]">220615 - BASE GRAVABLE </span>
+
+					<input
+						type="text"
+						maxlength="14"
+						pattern="[0-9]+"
+						min="0"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500"
+						>Se deberá anotar el monto de los ingresos derivados de las inversiones mantenidas en el
+						extranjero</small
+					>
+				</label>
+
+				<!-- 220616 - IMPUESTO DETERMINADO -->
+				<label class="block">
+					<span class="block font-semibold text-[#621132]">220616 - IMPUESTO DETERMINADO </span>
+
+					<input
+						type="text"
+						maxlength="14"
+						pattern="[0-9]+"
+						min="0"
+						class="input p-1 text-black"
+						placeholder="ejemplo: 111100001111000011"
+						required
+					/>
+					<small class="text-sm text-gray-500"
+						>Se deberá anotar el monto de los ingresos derivados de las inversiones mantenidas en el
+						extranjero</small
 					>
 				</label>
 
@@ -183,6 +295,8 @@ Si no desea ser publicado, puede optar por hacer el pago.
 ¿Desea pagar la actualización?   SI   NO"
 	on:action={() => {
 		// logic here
+		console.log('action');
+		showAlert220619 = false;
 	}}
 	on:cancel={() => {
 		// logic here
