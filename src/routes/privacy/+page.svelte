@@ -2,7 +2,6 @@
 </script>
 
 <svelte:head>
-	<title>Aviso de Privasidad</title>
 	<meta name="description" content="SAT demo app" />
 	<meta name="robots" content="noindex, nofollow" />
 </svelte:head>
