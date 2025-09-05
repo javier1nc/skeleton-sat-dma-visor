@@ -45,6 +45,8 @@
 			>
 				Inicio
 			</a>
+
+			<!--
 			<a
 				href={`${basepath}${apppath}`}
 				class="text-sm font-semibold text-gray-700 hover:text-[#621132]"
@@ -52,6 +54,8 @@
 			>
 				{appname}
 			</a>
+
+		-->
 
 			<!--<a
 				href={`${basepath}/admin`}
@@ -83,8 +87,12 @@
 		</p>
 
 		<!-- Desktop Nav -->
+
+		<!--
 		<nav class="hidden space-x-6 sm:flex">
 			<p class="text-sm font-semibold text-white hover:text-[#821132]">Inicio</p>
 		</nav>
+
+		-->
 	</div>
 </header>

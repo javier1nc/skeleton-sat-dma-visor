@@ -796,6 +796,42 @@
 						>
 					</label>
 
+					<!-- C25 - CANTIDAD A FAVOR -->
+					<label class="block">
+						<span class="block font-semibold text-[#621132]">C25 - CANTIDAD A FAVOR</span>
+
+						<input
+							type="text"
+							maxlength="12"
+							pattern="[0-9]+"
+							min="0"
+							max="12"
+							class="input p-1 text-black"
+							placeholder="ejemplo: 111100001111000011"
+							required
+						/>
+
+						<small class="text-sm text-gray-500">_</small>
+					</label>
+
+					<!-- C26 - CANTIDAD A PAGAR -->
+					<label class="block">
+						<span class="block font-semibold text-[#621132]">C26 - CANTIDAD A PAGAR</span>
+
+						<input
+							type="text"
+							maxlength="12"
+							pattern="[0-9]+"
+							min="0"
+							max="12"
+							class="input p-1 text-black"
+							placeholder="ejemplo: 111100001111000011"
+							required
+						/>
+
+						<small class="text-sm text-gray-500">_</small>
+					</label>
+
 					<hr class="hr" />
 				</label>
 			</article>
